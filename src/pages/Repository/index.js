@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import api from '../../services/api';
 
-import Container from '../../components/Container';
+import Container from '../../components/Container/styles';
 import { Loading, Owner, IssueList } from './styles';
 
 // import { Container } from './styles';

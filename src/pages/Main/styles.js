@@ -11,7 +11,8 @@ export const Form = styled.form`
   input {
     /* To input form ocupate all screen */
     flex: 1;
-    border: 1px solid #eee;
+    border: 1px solid;
+    border-color: ${props => (props.error ? '#f00' : '#eee')};
     padding: 10px 15px;
     border-radius: 4px;
     font-size: 16px;

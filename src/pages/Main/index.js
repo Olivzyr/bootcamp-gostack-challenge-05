@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import api from '../../services/api';
 
-import Container from '../../components/Container';
+import Container from '../../components/Container/styles';
 import { Form, SubmitButton, List } from './styles';
 
 export default class Main extends Component {
@@ -13,6 +13,7 @@ export default class Main extends Component {
     newRepo: '',
     repositories: [],
     loading: 0,
+    error: 0,
   };
 
   // Browser local storage loading data
@@ -46,22 +47,32 @@ export default class Main extends Component {
 
     const { newRepo, repositories } = this.state;
 
-    const response = await api.get(`/repos/${newRepo}`);
+    // If have repository valid name try else error message.
+    try {
+      const response = await api.get(`/repos/${newRepo}`);
 
-    const data = {
-      name: response.data.full_name,
-    };
+      const data = {
+        name: response.data.full_name,
+      };
 
-    this.setState({
-      // Keep past state and insert a new data present in github api
-      repositories: [...repositories, data],
-      newRepo: '',
-      loading: 0,
-    });
+      this.setState({
+        // Keep past state and insert a new data present in github api
+        repositories: [...repositories, data],
+        newRepo: '',
+        loading: 0,
+        error: 0,
+      });
+    } catch (error) {
+      this.setState({
+        loading: 0,
+        error: 1,
+      });
+      console.log('error');
+    }
   };
 
   render() {
-    const { newRepo, repositories, loading } = this.state;
+    const { newRepo, repositories, loading, error } = this.state;
 
     return (
       <Container>
@@ -70,7 +81,7 @@ export default class Main extends Component {
           Repositórios
         </h1>
 
-        <Form onSubmit={this.handleSubmit}>
+        <Form onSubmit={this.handleSubmit} error={error}>
           <input
             type="text"
             placeholder="Adicionar repositório"
