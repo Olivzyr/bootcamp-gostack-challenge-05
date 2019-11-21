@@ -33,6 +33,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'react/state-in-constructor': [1, 'never'],
     'react/static-property-placement': [0],
+    'react/button-has-type': [0],
 
   },
 };

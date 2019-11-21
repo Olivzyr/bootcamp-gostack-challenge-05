@@ -1,5 +1,5 @@
 {
-  "name": "modulo-05",
+  "name": "bootcamp-gostack-desafio-05",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,6 +7,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-dropdown": "^1.6.4",
     "react-icons": "^3.8.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",

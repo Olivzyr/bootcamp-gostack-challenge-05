@@ -42,6 +42,19 @@ export const Owner = styled.header`
   }
 `;
 
+export const StateIssues = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+
+  strong {
+    font-size: 15px;
+  }
+`;
+
 export const IssueList = styled.ul`
   padding-top: 30px;
   margin-top: 30px;
@@ -99,5 +112,20 @@ export const IssueList = styled.ul`
         color: #999;
       }
     }
+  }
+`;
+
+export const Page = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    background-color: #7159c1;
+    color: #eee;
+    margin: 15px;
+    width: 150px;
+    height: 25px;
+    border-radius: 15px;
   }
 `;

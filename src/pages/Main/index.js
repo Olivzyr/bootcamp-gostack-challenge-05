@@ -55,6 +55,14 @@ export default class Main extends Component {
         name: response.data.full_name,
       };
 
+      const repositoriesElements = repositories.find(
+        element => element.name === data.name
+      );
+
+      if (repositoriesElements) {
+        throw new Error('Repositório duplicado');
+      }
+
       this.setState({
         // Keep past state and insert a new data present in github api
         repositories: [...repositories, data],
@@ -62,12 +70,11 @@ export default class Main extends Component {
         loading: 0,
         error: 0,
       });
-    } catch (error) {
+    } catch {
       this.setState({
         loading: 0,
         error: 1,
       });
-      console.log('error');
     }
   };
 
