@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://skylab.rocketseat.com.br/api/files/1561993774891.svg",>
+  <img src="https://skylab.rocketseat.com.br/api/files/1564682281422.svg",>
 </p>
 
 ---
@@ -14,9 +14,9 @@
 
   <!-- Indice personalizado -->
   <p align="center">
-      <a href="#about-the-challenge">About the challenge</a> 
+      <a href="#about-the-challenge">About the challenge</a>
       <strong>|</strong>
-      <a href="#resources-and-procedures">Resources and Procedures</a> 
+      <a href="#resources-and-procedures">Resources and Procedures</a>
       <strong>|</strong>
       <a href="#running-for-first-time">Running for First Time</a>
       <strong>|</strong>
@@ -55,9 +55,11 @@
 ## Developed Features
 
 - [x] Header
-- [x] Post List
-- [x] Post
-- [x] Comment
+- [x] Issue List
+- [x] Repository List
+- [x] Pagination List
+- [x] Filter Issues List (Open, Closed, All)
+- [x] API git-hub connection
 ---
 ## Running for First Time
 To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js v10.16][nodejs] or higher + [Yarn v1.13][yarn] or higher installed on your computer. From your command line:
@@ -73,7 +75,7 @@ $ cd bootcamp-gostack-challenge-05
 $ yarn install
 
 # Run the Project
-$ yarn dev
+$ yarn start
 
 ```
 ---
@@ -83,19 +85,51 @@ To create a tree files in project run commands present right below in respositor
 ```bash
 $ yarn add tree-cli
 
-$ yarn tree -l 3 -o out.txt --ignore node_modules, .gitignore
+$ yarn tree -l 4 -o out.txt --ignore node_modules, .gitignore
 
 ```
 
 #### Result after run comand present in top:
 
 ```bash
+├── LICENSE
+├── README.md
+├── package.json
+├── public
+|  ├── favicon.ico
+|  ├── index.html
+|  ├── logo192.png
+|  ├── logo512.png
+|  └── robots.txt
+├── src
+|  ├── App.js
+|  ├── components
+|  |  └── Container
+|  |     └── styles.js
+|  ├── index.js
+|  ├── pages
+|  |  ├── Main
+|  |  |  ├── index.js
+|  |  |  └── styles.js
+|  |  └── Repository
+|  |     ├── index.js
+|  |     └── styles.js
+|  ├── routes.js
+|  ├── services
+|  |  └── api.js
+|  └── styles
+|     └── global.js
+└── yarn.lock
+
+directory: 3101 file: 12204
+
+ignored: directory (216)
 
 ```
 ---
 ## Project in function
 
-![image][homePage]
+![image][Challenge-05]
 ---
 ## License
 This project is under the MIT license. See the [LICENSE](./LICENSE) for more information.
@@ -113,5 +147,6 @@ This project is under the MIT license. See the [LICENSE](./LICENSE) for more inf
 [nodejs]: https://nodejs.org/
 [yarn]: https://yarnpkg.com/
 
+[Challenge-05]:https://user-images.githubusercontent.com/16024701/69390939-ec361980-0caf-11ea-9681-e775092af3fb.gif
 
 
