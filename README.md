@@ -50,6 +50,13 @@
 - [x] ReactJS
 - [x] HTML
 - [x] CSS
+- [x] axios
+- [x] prop-types
+- [x] react-icons
+- [x] styled-components
+- [x] eslint
+- [x] prettier
+- [x] editorconfig
 
 ---
 ## Developed Features
